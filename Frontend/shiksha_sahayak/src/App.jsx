@@ -22,7 +22,7 @@ import TestGenerator from "./pages/TestGenerator";
 import PPTGenerator from "./pages/PPTGenerator";
 
 // ✅ 1. IMPORT YOUR NEW CHATBOT WIDGET
-import ChatBotWidget from "./components/ChatBotWidget";
+import ChatBotWidget from "./components/ChatbotWidget";
 
 function Layout() {
   const location = useLocation();
