@@ -1,0 +1,40 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+
+# Database
+*.db
+instance/
+
+# Node
+node_modules/
+
+# IDE
+.idea/
+.vs/
+.vscode/
+*.iml
+
+# Build artifacts
+dist/
+output.pptx
+notes.pdf
+temp_uploads/
+generated_ppts/
+
+# OS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Flask
+.flaskenv

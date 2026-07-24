@@ -1,0 +1,1 @@
+web: cd Backend/shiksha_sahayak_backend && pip install -r requirements.txt && npm install && gunicorn run:app

@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+.venv/
+venv/
+
+# Database
+instance/
+*.db
+
+# IDE
+.idea/
+*.iml
+
+# Environment variables
+.env
+.flaskenv

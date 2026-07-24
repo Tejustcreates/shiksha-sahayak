@@ -1,0 +1,124 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=PyCharm
+
+###
+
+### Login
+POST http://127.0.0.1:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "tanvi2@gmail.com",
+  "password": "123456"
+}
+
+### Register Teacher
+POST http://127.0.0.1:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "Tanvi",
+  "lastName": "Chaudhari",
+  "email": "tanvi@gmail.com",
+  "password": "123456",
+  "subjectTaught": "Math",
+  "teachingExperience": 3,
+  "schoolName": "ABC School"
+}
+
+
+### Register Teacher
+POST http://127.0.0.1:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "Tanvi",
+  "lastName": "Chaudhari",
+  "email": "tanvi2@gmail.com",
+  "password": "123456",
+  "subjectTaught": "Math",
+  "teachingExperience": 3,
+  "schoolName": "ABC School"
+}
+
+### Get all teachers
+GET http://127.0.0.1:5000/api/teachers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0YW52aUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJleHAiOjE3NzQ2OTIzNjZ9.nDD13lmBzCyUad2BOxsJHKnrXoykrdZsCAhIUnwEI2k
+###
+
+### Delete teacher
+DELETE http://127.0.0.1:5000/api/teachers/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0YW52aUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJleHAiOjE3NzQ2OTIzNjZ9.nDD13lmBzCyUad2BOxsJHKnrXoykrdZsCAhIUnwEI2k
+
+### Update teacher
+PUT http://127.0.0.1:5000/api/teachers/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0YW52aTJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzc0NjkzMjk2fQ.U_ovQa3aaMvruhas6me5PAiGyzCmDFMYOIcN-EQ45aA
+Content-Type: application/json
+
+{
+  "firstName": "Updated Name",
+  "schoolName": "New School"
+}
+
+### Mark Attendance
+POST http://127.0.0.1:5000/api/attendance
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0YW52aTJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzc0Njk0ODE4fQ.y42Tk3lt3QuEtXguJ9DW1RXHofZZR0ewKLiIYpwPJ3g
+Content-Type: application/json
+
+{
+  "date": "2026-03-27",
+  "status": "PRESENT",
+  "studentId": 1,
+  "teacherId": 1,
+  "classId": 1
+}
+
+### Get Attendance by Student
+GET http://127.0.0.1:5000/api/attendance/student/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0YW52aTJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzc0Njk0ODE4fQ.y42Tk3lt3QuEtXguJ9DW1RXHofZZR0ewKLiIYpwPJ3g
+
+### Get Attendance by Date
+GET http://127.0.0.1:5000/api/attendance/date/2026-03-27
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0YW52aTJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzc0Njk0ODE4fQ.y42Tk3lt3QuEtXguJ9DW1RXHofZZR0ewKLiIYpwPJ3g
+
+### Get Attendance by Teacher
+GET http://127.0.0.1:5000/api/attendance/teacher/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0YW52aTJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzc0Njk0ODE4fQ.y42Tk3lt3QuEtXguJ9DW1RXHofZZR0ewKLiIYpwPJ3g
+
+### Generate Test
+POST http://127.0.0.1:5000/api/test/generate
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0YW52aTJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzc0Nzg3NzQwfQ.smDpLjd22yImvMF-noOMijkCq6b0tMYtyTTC5H-Ht-A
+Content-Type: application/json
+
+{
+  "subject": "Math",
+  "topics": "Algebra, Equations",
+  "totalMarks": 50,
+  "difficulty": "Medium",
+  "numQuestions": 5
+}
+
+### POST http://127.0.0.1:5000/api/ppt/generate
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0YW52aTJAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzc0Nzg3NzQwfQ.smDpLjd22yImvMF-noOMijkCq6b0tMYtyTTC5H-Ht-A
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="mode"
+
+auto
+--boundary
+Content-Disposition: form-data; name="slide_count"
+
+5
+--boundary
+Content-Disposition: form-data; name="file"; filename="notes.pdf"
+Content-Type: application/pdf
+
+< C:/Users/LENOVO/Downloads/notes.pdf
+--boundary--
+###
+# curl -i http://httpbin.org/ip
+GET http://httpbin.org/ip
+
+###
